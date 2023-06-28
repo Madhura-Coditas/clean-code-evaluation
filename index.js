@@ -7,7 +7,6 @@ const upload = multer({ dest: 'uploads/' });
 
 // Upload an image
 app.post('/images', upload.single('image'), (req, res) => {
-  // Process the uploaded image and save it
   // Generate a unique identifier for the image
   const imageId = generateUniqueId();
   res.json({ id: imageId });
